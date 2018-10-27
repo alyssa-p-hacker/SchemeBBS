@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "ISO/IEC 15445:2000//DTD HTML//EN">
+<HTML lang="EN">
+<HEAD>
+<META content="text/html; charset=UTF-8" http-equiv="content-type">
+<META name="viewport" content="width=device-width, initial-scale=1.0">
+<LINK rel="icon" href="/static/favicon.ico" type="image/png">
+<TITLE>SchemeBBS</TITLE>
+<STYLE type="text/css">
+body {
+    width: 98%;
+}
+img {
+max-width: 25%;
+}
+ins {
+  text-decoration: none;
+  background-color: black;
+}
+ins:hover {
+  background-color: transparent;
+}
+</STYLE>
+</HEAD>
+<BODY>
+<H1>SchemeBBS</H1>
+<HR>
+<P>An anonymous BBS (textboard) written in R<SUP>5</SUP>RS Scheme</P>
+<H2>Demo Boards</H2>
+<UL>
+<LI><A href="/prog/">/prog/</A> - <B>Programming</B> (CS and textboard engineering discussions)</LI>
+<LI><A href="/sol/">/sol/</A> - <B>Solipsisms</B> (whatever that means, everything goes)</LI>
+</UL>
+<H2>Features</H2>
+<P><CODE>bbs.scm</CODE> is a <A href="https://en.wikipedia.org/wiki/2channel">2ch</A>
+clone with the following features:</P>
+<UL>
+<LI>No registration required, anonymous posting</LI>
+<LI>No cookies</LI>
+<LI>No Javascript</LI>
+<LI>No Images</LI>
+<LI>Lightweight Markup</LI>
+<LI>Serves web pages to browsers, <A href="/sexp">S-expressions</A> to LISP clients</LI>
+<LI>Stylesheet switcher</LI>
+<LI>Multi-boards</LI>
+<LI>Runs well on "el cheapo" VPS</LI>
+<LI>Optimized for text-based browsers such as Links or w3m</LI>
+<LI>Entirely written in Scheme</LI>
+<LI>Open Source</LI>
+</UL>
+<H2>Alternate Access</H2>
+<P>If you'd like to, you can also visit this website anonymously via i2p at
+<A href="7ubwrcixdcemzqwqzh2vaakjsnochj2biuzpo6dc2n4f7wqj4pua.b32.i2p">bbs.i2p</A></P>
+<H2>Source Code</H2>
+<P>Check the first draft of this program at <A href="https://gitlab.com/naughtybits/schemebbs">gitlab</A>. It was written in the
+hurry of a lone hackaton, therefore some refactoring is needed before the
+release of a tarball.</P>
+<H2>A Bit of History</H2>
+<P><INS>/prog/</INS> was a <A href="https://en.wikipedia.org/wiki/Textboard">textboard</A> about ``programming'', hosted at world4ch.org and later dis.4chan.org. It was an odd and fascinating place that went mostly unmoderated for years.  Unfortunately the owners were made to remember its existence thanks to imbecilic spammers; and without consideration for the small community that inhabited the place, the formers decided to pull the plug on a sad day of July 2014.  <P> If you weren't lucky enough to have been a part of it, an archive of all the posts is available at <A href="https://archive.org/details/prog-20140418.db">archive.org</A>.  There's a <A href="http://world4search.readsicp.org/">search engine</A> for this archive which has also been entirely restored as web pages at <A href="https://archive.tinychan.org/prog/">tinychan.org</A>.</P>
+<P>Back then, a somewhat recurrent joke was that the BBS script, <CODE>shiichan</CODE>, should be rewritten in Scheme. I'm not aware this task was ever completed.  Well, it is now. For the sake of it. Another motivation was to write some real world software in Scheme: beside implementations you won't find a lot of Scheme code in the wild. This is especially true for MIT Scheme. So, however trivial this program is, its merits are its mere existence and the fact it's been deployed.</P>
+
+<H2>More History</H2>
+<P>If you're interested in the history of textboards as a whole, here are a few interesting reads: </P>
+<UL>
+<LI><A href="https://wakaba.c3.cx/shii/shiichan">Shii's blurb</A></LI>
+<LI><A href="http://tanasinn.info/wiki/Main_Page">Tanasinn wiki</A></LI>
+<LI><A href="https://github.com/bibanon/bibanon/wiki/2channel">bibanon</A></LI>
+</UL>
+
+<H2>Other Textboard Scripts</H2>
+<UL>
+<LI><A href="https://github.com/j416dy/2ch">bbs.cgi</A> - The original <A href="https://5ch.net/">2ch</A> Perl script</LI>
+<LI><A href="https://wakaba.c3.cx/shii/shiichan3960.zip">Shiichan</A> - The PHP script that was used at world4ch</LI>
+<LI><A href="http://wakaba.c3.cx/s/web/wakaba_kareha">Kareha</A> - Popular Perl script used by <A href="http://4-ch.net/4ch">4-ch.net</A> among others</LI>
+<LI><A href="http://tanami.org/pub/software/TrueScript/Tablecat.zip">Tablecat</A> - Tablecat's Perl script (the site is currently offline)</LI>
+<LI><A href="https://github.com/desuwa/hivebbs">HiveBBS</A> - A Ruby script seen at <A href="http://bbs.neet.tv/">bbs.neet.tv</A></LI>
+<LI><A href="https://github.com/z411/weabot">Weabot</A> - Python script used by the most active western textboard: <A href="https://bienvenidoainternet.org/bai">Bienvenido a Internet</A></LI>
+</UL>
+
+<P>Here's a <A href="http://www.9ch.in/overscript/">more comprehensive list</A>.</P>
+
+<H2>Software Stack</H2>
+<P>SchemeBBS is written in MIT/GNU Scheme, Nginx is used as a reverse proxy and the whole system runs on FreeBSD. There's no database, messages are stored as Scheme objects in plain files. This stack is lovely. Nice icons too.</P>
+<P><A href="https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html"><IMG src="/static/img/mit-scheme.png" alt="MIT Scheme logo"></A><A href="https://www.gnu.org/software/mit-scheme/"><IMG src="/static/img/gnu.png" alt="GNU logo"></A><A href="http://nginx.com"><IMG src="/static/img/nginx.png" alt="Nginx logo"></A><A href="http://freebsd.org"><IMG src="/static/img/freebsd.png" alt="FreeBSD logo"></A></P>
+<H2>Bonus Track</H2>
+<P>Listening to this tune will make you enjoy writing Scheme code.</P>
+<P><A href="/static/img/abelson-stole-the-precious-course-mit-version.webm"><IMG src="/static/img/snake.png" alt="The SICP snake"></A></P>
+<HR>
+<P>
+<A href="https://validator.w3.org/check?uri=referer"><IMG src="/static/img/valid-html.png" alt="Valid ISO/IEC 15445:2000"></A>
+<A href="https://www.eff.org/deeplinks/2013/12/nsa-turns-cookies-and-more-surveillance-beacons"><IMG src="/static/img/nocookie.png" alt="This site doesn't use cookies" title="No Cookies!"></A>
+<A href="https://www.gnu.org/philosophy/javascript-trap.en.html"><IMG src="/static/img/nojs.png" alt="This site doesn't use Javascript" title="No Javascript!"></A></P>
+</BODY>
+</HTML>

@@ -1,0 +1,237 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #200200;
+  font-family: serif;
+  font-size: 100%;
+}
+/* Board Name */
+h1 {
+  margin: 0.5em 2% 0.3em 2%;
+  padding: 0;
+  font-size: 2em;
+  font-weight: bold;
+}
+/* Headlines */
+h2 {
+  margin: 0 6% 0 2%;
+  padding: 0.5em 0 0 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+/* Links */
+h2 samp {
+    font-size: 0.66em;
+}
+hr {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  height: 1px;
+  background-color: #aaaaaa;
+  color: #aaaaaa;
+}
+p.newthread {
+  margin: 1em 2% 2em 2%;
+  padding: 1em 2%;
+  background-color: #efefef;
+}
+/* menu */
+p.nav {
+  margin: 0.5em 2% 0.5em 2%;
+  padding: 0;
+  font-size: .9em;
+  font-style: italic;
+  background-color: white;
+}
+/* thread navigation */
+pre.jump {
+  margin: 0 2% -1em 0;
+  padding: 0;
+  background-color: white;
+  font-size: 1em;
+  font-family: serif;
+  font-weight: bold;
+  word-spacing: 1em;
+  text-align: right;
+}
+pre.jump a {
+text-decoration: none;
+}
+a, a:visited, a:active {
+  color: #882200;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:target {
+  background-color: #f3f3f3;
+  text-decoration: underline;
+}
+dl {
+  margin: 0.5em 2% 0 2%;
+  padding: 0;
+}
+dt {
+  margin: 0;
+  padding: 0;
+}
+/* post number */
+dt a {
+  font-size: 1.2em;
+}
+/* post date */
+dt code {
+  font-size: 0.9em;
+  font-family: "Courier New", monospace;
+  color: #555555;
+}
+dt samp {
+  font-size: .9em;
+  font-family: "Courier New", monospace;
+  margin-left: 1%;
+}
+
+dd {
+  margin: 0 2%;
+  padding: 0;
+  line-height: 1.4em;
+}
+dd p {
+  margin: 1em 0;
+  padding: 0;
+  background-color: transparent;
+  word-wrap: break-word;
+}
+
+dd pre, dd code {
+
+  font-size: 1em;
+  font-family: "Courier New", monospace;
+}
+dd pre {
+  margin: 1.2em 0;
+  padding: 2px;
+  background-color: #f7f7f7;
+  line-height: 1.4em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+blockquote {
+  border-left: solid 2px #cccccc;
+  margin: 1em 0 1em 0;
+  padding: 0 0 0 1em;
+  background-color: inherit;
+  color: #555555;
+}
+blockquote:hover {
+  background-color: #fafafa;
+}
+
+/* spoilers */
+del {
+  background-color: #200200;
+  text-decoration: none;
+}
+del:hover {
+  background-color: transparent;
+}
+/* thread list */
+table {
+  margin: 1em 2%;
+  padding: 0;
+  border-collapse: collapse;
+}
+th {
+  color: #666666;
+  padding: 0.1em 0.5em;
+  font-family: "Courier New", monospace;
+  font-weight: normal;
+  text-align: left;
+  font-size: 1em;
+}
+td {
+  border: 0;
+  padding: 0.1em 0.5em;
+// background-color: #fafafa;
+  line-height: 1em;
+}
+
+tr:nth-child(odd) {
+  background: #fafafa;
+}
+tr:hover {
+  background-color: yellow;
+}
+td p, td pre, td blockquote {
+  margin: .5em 0;
+}
+
+/* forms */
+
+textarea {
+  margin: 0.2em 0 0.2em 0;
+  border: 1px solid #bababa;
+  padding: 2px;
+  max-width: 98%;
+  //overflow: hidden;
+  
+  font-size: 1em;
+  font-family: "Courier New", monospace;
+}
+input[type=text] {
+  margin: 0.2em 0 0.5em 0;
+  border: 1px solid #bababa;
+  padding: 2px;
+  max-width: 98%;
+  font-size: 1em;
+  font-family: "Courier New", monospace;
+}
+input[type=submit] {
+
+  font-family: sans-serif;
+  font-size: 0.8em;
+  margin: 0.4em 0;
+  border: 1px solid #bababa;
+  padding: 2px;
+  background-color: #dadada;
+}
+input[type=submit]:hover {
+  background-color: yellow;
+}
+input[type=submit]:active {
+  padding: 2px 1px 2px 3px;
+}
+
+input[type=checkbox] {
+  border: 1px solid #bababa;
+  vertical-align: middle;
+  margin: 0 2px;
+}
+
+fieldset.comment {
+  display: none;
+}
+/* preferences */
+fieldset {
+  border: none;
+}
+ul {
+ margin: 0 0 1em 0;
+}
+/* flash messages */
+p.flash {
+  background: transparent;
+  color: red;
+}
+
+p.footer {
+font-size: 0.9em;
+font-family: "Courier New", monospace;
+background: transparent;
+text-align: center;
+}
