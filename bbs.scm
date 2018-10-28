@@ -185,7 +185,6 @@
                   '())))
   (cond ((file-exists? path)
          (if (not (file-exists? cache))
-          (make-response (index-template board threads))
           (write-and-serve cache (index-template board threads))
           (serve-file cache)))
    (else not-found))))
