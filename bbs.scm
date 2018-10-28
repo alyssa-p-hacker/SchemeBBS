@@ -18,10 +18,9 @@
 
 
 (define (get-form-hash)
-  "this stub is here to stay"
-  "can't user blowfish or mcrypt, so..."
-  (call-with-input-file "hash" read))
-
+ "this stub is here to stay"
+ "can't user blowfish or mcrypt, so..."
+ (call-with-input-file "hash" read))
 
 ;;; helpers
 
@@ -33,11 +32,9 @@
 
 (define server (create-server))
 
-
 (define (make-response template)
   `(200 ,(list (make-http-header 'content-type "text/html; charset=utf-8"))
     ,(with-output-to-string (lambda () (sxml->html template)))))
-
 
 (define (write-and-serve path template)
     (with-output-to-file path (lambda () (sxml->html template)))
@@ -45,14 +42,11 @@
                            (make-http-header 'cache-control "Private"))))
 
 ;;; static files
-;;; TODO add mime types, see in server.scm
 (get server (serve-static "static") '("static"))
 
 (get server (lambda (req params) (serve-file "static/favicon.ico")) '("favicon.ico"))
 
-(add-handler
- server
- (lambda (req params) (route req)))
+(add-handler server (lambda (req params) (route req)))
 
 (define (ignore-qstring fullpath)
   (let ((l (string-split fullpath #\?)))
@@ -123,10 +117,10 @@
   (main-template (title board) (preferences-view board query-string-list)))
 
 (define (retry-thread-template board headline message flash)
-  (main-template (title board) (make-thread-form board headline message flash)))
+  (main-template (title board) (make-thread-form board headline message flash) "thread"))
 
 (define (retry-post-template board thread frontpage? message flash)
-  (main-template (title board) `(dl ,(make-post-form board thread frontpage? message flash))))
+  (main-template (title board) `(dl ,(make-post-form board thread frontpage? message flash)) "thread"))
 
 
 
@@ -184,17 +178,17 @@
 ;(make-response (list-template board threads))))
 
 (define (view-index board)
-  (let* ((path (make-path *sexp* board "index"))
-         (cache (make-path *html* board "index"))
-         (threads (if (file-exists? path)
-                      (call-with-input-file path read)
-                      '())))
-    (cond ((file-exists? path)
-    (if (not (file-exists? cache))
-        ;(make-response (index-template board threads))
-        (write-and-serve cache (index-template board threads))
-        (serve-file cache)))
-          (else not-found))))
+ (let* ((path (make-path *sexp* board "index"))
+        (cache (make-path *html* board "index"))
+        (threads (if (file-exists? path)
+                  (call-with-input-file path read)
+                  '())))
+  (cond ((file-exists? path)
+         (if (not (file-exists? cache))
+          (make-response (index-template board threads))
+          (write-and-serve cache (index-template board threads))
+          (serve-file cache)))
+   (else not-found))))
 
 ;;; controllers POST
 (define (post-message board thread req query-string)
@@ -234,7 +228,7 @@
                    (else 
                      
                      (retry-post-form validation board thread frontpage params)))))
-          (else not-found)))) ;;; TODO another error for posting in non existent thread
+          (else not-found)))) 
 
 (define (redirection board thread post query-string frontpage? newthread?)
   (if frontpage?
@@ -388,7 +382,6 @@
                      (string-null? fake-name)))
            'spam)
           (else 'ok))))
-
 
 (define (retry-thread-form validation board params)
   (let ((headline (lookup-def 'titulus params ""))
