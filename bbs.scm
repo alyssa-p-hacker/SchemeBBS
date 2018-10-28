@@ -84,7 +84,7 @@
                  ((,board "list") () (view-list board))
                  ((,board "preferences") () (set-preferences board query-string))
                  ((,board ,thread) (integer? (string->number thread)) (view-thread board thread))
-                 ((,board ,thread ,posts) (and (integer? (string->number thread)) (integer? (string->number posts))) (view-thread board thread posts))
+                 ((,board ,thread ,posts) (integer? (string->number thread)) (view-thread board thread posts))
                  (_ () not-found)))
           ((equal? method "POST")
            (match path
