@@ -107,7 +107,7 @@
          "This BBS doesn't set HTTP cookies and won't remember you next time you visit. "
          "So the only way to store this setting is to save that URL.")
     (form (@  (action ,(make-abs-path board "preferences")) (method "get"))
-          (fieldset 
+      (p
           (input ,(append `(@ (type "radio") (name "css") (id "default") (value "default"))
 			  (if (null? query-string-list)
 			      `((checked "checked"))
