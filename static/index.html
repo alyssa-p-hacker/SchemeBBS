@@ -12,13 +12,17 @@ body {
 img {
 max-width: 25%;
 }
-ins {
+del {
   text-decoration: none;
   background-color: black;
 }
 ins:hover {
   background-color: transparent;
 }
+th { text-align: left; font-weight: normal; text-decoration: underline; padding-bottom: 1em;}
+td { padding: 0.2em 2em 0.2em 0}
+pre { background-color: #ddd; padding: 0.4em}
+blockquote { color: #666; border-left: 2px solid #999; padding-left: 0.5em; margin-left: 0}
 </STYLE>
 </HEAD>
 <BODY>
@@ -47,6 +51,23 @@ clone with the following features:</P>
 <LI>Entirely written in Scheme</LI>
 <LI>Open Source</LI>
 </UL>
+<H2>Formatting</H2>
+
+<P>One newline is a line break (&lt;BR&gt;), two or more newlines will start a new paragraph.</P>
+<TABLE id="toggled-element" summary="Formatting help">
+<THEAD><TR><TH>input</TH><TH>output</TH></TR></THEAD>
+<TBODY><TR><TD><SAMP>**bold**</SAMP></TD><TD><B>bold</B></TD></TR>
+<TR><TD><SAMP>__italic__</SAMP></TD><TD><I>italic</I></TD></TR>
+<TR><TD><SAMP>==monospaced==</SAMP></TD><TD><CODE>monospaced</CODE></TD></TR>
+<TR><TD><SAMP>~~spoiler~~</SAMP></TD><TD><DEL>spoiler</DEL></TD></TR>
+<TR><TD><SAMP>http://c2.com</SAMP></TD><TD><A href="http://c2.com">http://c2.com</A></TD></TR>
+<TR><TD><SAMP>link to post &gt;&gt;7</SAMP></TD><TD>link to post <A href="#">&gt;&gt;7</A></TD></TR>
+<TR><TD><SAMP>&gt;quoted text</SAMP></TD><TD><BLOCKQUOTE><P>quoted text</P></BLOCKQUOTE></TD></TR>
+<TR><TD><KBD>```<BR>;;;This is a block of code<BR>(lambda (f)<BR>&nbsp;&nbsp;((lambda(x) (f (x x)))<BR>&nbsp;&nbsp;&nbsp;(lambda (x) (f (x x))))<BR>```</KBD></TD>
+<TD><PRE>;;;This is a block of code
+(lambda (f)
+  ((lambda(x) (f (x x)))
+   (lambda (x) (f (x x))))</PRE></TD></TR></TBODY></TABLE>
 <H2>Alternate Access</H2>
 <P>If you'd like to, you can also visit this website anonymously via i2p at
 <A href="http://7ubwrcixdcemzqwqzh2vaakjsnochj2biuzpo6dc2n4f7wqj4pua.b32.i2p">bbs.i2p</A></P>
@@ -55,7 +76,7 @@ clone with the following features:</P>
 hurry of a lone hackaton, therefore some refactoring is needed before the
 release of a tarball.</P>
 <H2>A Bit of History</H2>
-<P><INS>/prog/</INS> was a <A href="https://en.wikipedia.org/wiki/Textboard">textboard</A> about ``programming'', hosted at world4ch.org and later dis.4chan.org. It was an odd and fascinating place that went mostly unmoderated for years.  Unfortunately the owners were made to remember its existence thanks to imbecilic spammers; and without consideration for the small community that inhabited the place, the formers decided to pull the plug on a sad day of July 2014.  <P> If you weren't lucky enough to have been a part of it, an archive of all the posts is available at <A href="https://archive.org/details/prog-20140418.db">archive.org</A>.  There's a <A href="http://world4search.readsicp.org/">search engine</A> for this archive which has also been entirely restored as web pages at <A href="https://archive.tinychan.org/prog/">tinychan.org</A>.</P>
+<P><DEL>/prog/</DEL> was a <A href="https://en.wikipedia.org/wiki/Textboard">textboard</A> about ``programming'', hosted at world4ch.org and later dis.4chan.org. It was an odd and fascinating place that went mostly unmoderated for years.  Unfortunately the owners were made to remember its existence thanks to imbecilic spammers; and without consideration for the small community that inhabited the place, the formers decided to pull the plug on a sad day of July 2014.  <P> If you weren't lucky enough to have been a part of it, an archive of all the posts is available at <A href="https://archive.org/details/prog-20140418.db">archive.org</A>.  There's a <A href="http://world4search.readsicp.org/">search engine</A> for this archive which has also been entirely restored as web pages at <A href="https://archive.tinychan.org/prog/">tinychan.org</A>.</P>
 <P>Back then, a somewhat recurrent joke was that the BBS script, <CODE>shiichan</CODE>, should be rewritten in Scheme. I'm not aware this task was ever completed.  Well, it is now. For the sake of it. Another motivation was to write some real world software in Scheme: beside implementations you won't find a lot of Scheme code in the wild. This is especially true for MIT Scheme. So, however trivial this program is, its merits are its mere existence and the fact it's been deployed.</P>
 
 <H2>More History</H2>
