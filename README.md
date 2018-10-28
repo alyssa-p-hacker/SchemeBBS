@@ -1,5 +1,23 @@
 # SchemeBBS
 
+Anonymous BBS written in MIT Scheme
+
+## Demo
+
+[https://textboard.org](http://textboard.org)
+
+## Run it
+
+```
+./init.sh 8080
+```
+
+Note: SchemeBBS should not directly serves client, its HTTP implementation is 
+far too incomplete. It needs Nginx as a reverse proxy for caching and serving
+static files.
+
+## Patching MIT Scheme
+
 The file runtime/http-syntax.scm follows the RFC 2616 which requires
 that the value of the Location header be an absolute URI.
 
