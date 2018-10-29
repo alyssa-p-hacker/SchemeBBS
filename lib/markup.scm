@@ -187,7 +187,7 @@
 (define link
   (transform-rule
     'link
-    "\\'http-url"
+    "https?:\/\/[^ ]*"
     (lambda (sub) `(a (@ (href ,sub)) ,sub))))
 
 
