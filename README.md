@@ -4,7 +4,12 @@ Anonymous BBS written in MIT Scheme
 
 ## Demo
 
+[https://textboard.org/prog](http://textboard.org/prog)
 [https://textboard.org](http://textboard.org)
+
+You can also access it anonymously via i2p
+
+[http://7ubwrcixdcemzqwqzh2vaakjsnochj2biuzpo6dc2n4f7wqj4pua.b32.i2p](http://textboard.i2p)
 
 ## Run it
 
