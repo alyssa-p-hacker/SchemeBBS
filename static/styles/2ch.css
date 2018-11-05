@@ -249,6 +249,7 @@ input[type=submit] {
   padding: 2px;
   margin: 0;
   background-color: #dadada;
+  color: black;
 }
 input[type=submit]:hover {
   background-color: yellow;
