@@ -56,9 +56,14 @@
     (scan-rec lines '() 'undef)))
 
 (define (check-blankpost blocks)
-  (if (or (null? blocks) (null? (cdar blocks)) (for-all? (cdar blocks) empty-line?))
-      '()
-      blocks))
+  (cond ((null? blocks)
+         '())
+        ((or (null? (cdar blocks))
+             (for-all? (cdar blocks) empty-line?))
+         (if (= (length blocks) 1)
+             '()
+             (cdr blocks)))
+        (else blocks)))
 
 (define (format-code codeblock)
   (define (join l res)
