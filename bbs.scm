@@ -84,7 +84,8 @@
                  ((,board "list") () (view-list board))
                  ((,board "preferences") () (set-preferences board query-string))
                  ((,board ,thread) (integer? (string->number thread)) (view-thread board thread))
-                 ((,board ,thread ,posts) (integer? (string->number thread)) (view-thread board thread posts))
+                 ((,board ,thread ,posts) (and (integer? (string->number thread)) (range? posts))
+                   (view-thread board thread posts))
                  (_ () not-found)))
           ((equal? method "POST")
            (match path
@@ -151,17 +152,22 @@
           (else not-found))))
 
 
+(define (range? posts)
+  (irregex-match "([1-9][0-9]*|([1-9][0-9]*)-([1-9][0-9]*))(,([1-9][0-9]*|([1-9][0-9]*-[1-9][0-9]*)))*" posts))
+
 (define (posts-range range)
-  (define (foo x)
+  (define (expand-range x)
     (cond ((> (length x) 1)
            (let* ((a (string->number (car x)))
                   (b (string->number (cadr x)))
-                  (c (+ (- b a) 1)))
-             (if (> b a) (iota c a) a)))
+                  (low (if (> a *max-posts*) *max-posts* a))
+                  (high (if (> b *max-posts*) *max-posts* b))
+                  (count (+ (- high low) 1)))
+             (if (> high low) (iota count low) low)))
           (else (string->number (car x)))))
   (let* ((r1 (string-split range #\,))
          (r2 (map (lambda (x) (string-split x #\-)) r1))
-         (r3 (flatten (map foo r2))))
+         (r3 (flatten (map expand-range r2))))
     (sort (delete-duplicates r3) <)))
 
 
