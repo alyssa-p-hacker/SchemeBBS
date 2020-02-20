@@ -182,7 +182,6 @@
 (define quotelink
   (transform-rule
     'quotelink
-    ;(irregex ">>[0-9](([0-9]|,|-)*[0-9])*")
     (irregex ">>([1-9][0-9]*|([1-9][0-9]*)-([1-9][0-9]*))(,([1-9][0-9]*|([1-9][0-9]*-[1-9][0-9]*)))*")
     (lambda (sub) `(a (@ (href ,(string-append
                                   "/" *board*
