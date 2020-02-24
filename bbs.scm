@@ -152,7 +152,7 @@
 
 
 (define (range? posts)
-  (irregex-match ">>[1-9][0-9]{0,2}(-[1-9][0-9]{0,2})?(,[1-9][0-9]{0,2}(-[1-9][0-9]{0,2})?){0,20}" posts))
+  (irregex-match "[1-9][0-9]{0,2}(-[1-9][0-9]{0,2})?(,[1-9][0-9]{0,2}(-[1-9][0-9]{0,2})?){0,20}" posts))
 
 (define (posts-range range)
   (define (expand-range x)
