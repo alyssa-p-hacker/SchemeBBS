@@ -15,6 +15,7 @@
 (define *max-headline-size* 78)
 (define *max-post-size* 4096)
 (define *max-posts* 300)
+(define *posts-range-regex* 
 
 
 (define (get-form-hash)
@@ -153,9 +154,7 @@
 
 
 (define (range? posts)
-  (irregex-match "`[1-9][0-9]{0,2}(-[1-9][0-9]{0,2})?(,[1-9][0-9]{0,2}(-[1-9][0-9]{0,2})?){0,20}" posts))
-  ; SYNC lib/markup.scm:quotelink
-  ; SYNC digit count of *max-posts*
+  (irregex-match *range-regex* posts))
 
 (define (posts-range range)
   (define (expand-range x)
