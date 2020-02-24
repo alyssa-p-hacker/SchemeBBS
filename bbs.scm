@@ -84,7 +84,7 @@
                  ((,board "list") () (view-list board))
                  ((,board "preferences") () (set-preferences board query-string))
                  ((,board ,thread) (integer? (string->number thread)) (view-thread board thread))
-                 ((,board ,thread ,posts) (and (integer? (string->number thread)) (range? posts))
+                 ((,board ,thread ,posts) (and (integer? (string->number thread)) (range? posts) (< (string-length posts) 40))
                    (view-thread board thread posts))
                  (_ () not-found)))
           ((equal? method "POST")
@@ -153,7 +153,9 @@
 
 
 (define (range? posts)
-  (irregex-match "([1-9][0-9]*|([1-9][0-9]*)-([1-9][0-9]*))(,([1-9][0-9]*|([1-9][0-9]*-[1-9][0-9]*)))*" posts))
+  (irregex-match "`[1-9][0-9]{0,2}(-[1-9][0-9]{0,2})?(,[1-9][0-9]{0,2}(-[1-9][0-9]{0,2})?){0,20}" posts))
+  ; SYNC lib/markup.scm:quotelink
+  ; SYNC digit count of *max-posts*
 
 (define (posts-range range)
   (define (expand-range x)
