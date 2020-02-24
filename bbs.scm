@@ -15,8 +15,6 @@
 (define *max-headline-size* 78)
 (define *max-post-size* 4096)
 (define *max-posts* 300)
-(define *posts-range-regex* 
-
 
 (define (get-form-hash)
  "this stub is here to stay"
@@ -154,7 +152,7 @@
 
 
 (define (range? posts)
-  (irregex-match *range-regex* posts))
+  (irregex-match ">>[1-9][0-9]{0,2}(-[1-9][0-9]{0,2})?(,[1-9][0-9]{0,2}(-[1-9][0-9]{0,2})?){0,20}" posts))
 
 (define (posts-range range)
   (define (expand-range x)

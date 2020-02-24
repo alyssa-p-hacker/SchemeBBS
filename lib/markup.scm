@@ -182,8 +182,7 @@
 (define quotelink
   (transform-rule
     'quotelink
-    (irregex *posts-range-regex*)
-    ; SYNC bbs.scm:range?
+    (irregex ">>[1-9][0-9]{0,2}(-[1-9][0-9]{0,2})?(,[1-9][0-9]{0,2}(-[1-9][0-9]{0,2})?){0,20}")
     (lambda (sub) `(a (@ (href ,(string-append
                                   "/" *board*
                                   "/" *thread*
