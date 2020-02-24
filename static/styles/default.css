@@ -3,7 +3,7 @@ body {
   padding: 0;
   background-color: white;
   color: #000000;
-  font-family: serif;
+  font-family: "Liberation Serif", serif;
   font-size: 100%;
 }
 /* Board Name */
@@ -109,17 +109,16 @@ dd p {
 }
 
 dd pre, dd code {
-
-  font-size: 1em;
+  font-size: 0.9em;
   font-family: "Courier New", monospace;
 }
+
 dd pre {
   margin: 1.2em 0;
   padding: 2px;
   background-color: #f7f7f7;
   line-height: 1.4em;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: auto;
 }
 blockquote {
   border-left: solid 2px #cccccc;

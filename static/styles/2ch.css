@@ -181,8 +181,7 @@ dd pre {
   margin: 1.2em 0;
   padding: 2px;
   line-height: 1.45em;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: auto;
 }
 samp {
   font-size: .83em;
