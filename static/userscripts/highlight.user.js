@@ -17,5 +17,6 @@
 // ==/UserScript==
 GM_addStyle(GM_getResourceText('css'));
 (function () {
+  'use strict';
   hljs.initHighlighting();
-}) ();
+})();

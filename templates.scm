@@ -125,7 +125,7 @@
           (input (@ (type "submit") (value "SET!"))))))
 	
     
-    (dt (b "Sample Userscripts"))
+    (dt (b "Userscripts"))
     (dd
     (p 
       "This site doesn't use Javascript. "
@@ -139,7 +139,14 @@
        (ul 
 	  (li (a (@ (class "static") (href "/static/userscripts/highlight.user.js")) "Syntax Highlighting"))
 	  (li (a (@ (class "static") (href "/static/userscripts/wordfilter.user.js")) "Word Filter"))
-	  )))
+	  (li (a (@ (class "static") (href "/static/userscripts/unvip.user.js")) "unVIP (order the thread list by last updates"))
+	  (li (a (@ (class "static") (href "/static/userscripts/localjump.user.js")) "Jump to linked posts by anchors, Futaba-style"))
+	  ))
+    (dt (b "Clients"))
+    (dd
+    (p 
+      "Philip K wrote a slick mode for posting from Emacs, let's all " (code "M-x sbbs") ": "
+       (a (@ (href "https://git.sr.ht/~zge/sbbs")) "sbbs.el"))))
     (hr)
     ,footer
    ))
