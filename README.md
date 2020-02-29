@@ -34,7 +34,9 @@ How to apply this patch:
 
 ```
 curl -O http://ftp.gnu.org/gnu/mit-scheme/stable.pkg/9.2/mit-scheme-9.2.tar.gz
-patch -s -p0 mit-scheme-9.2.patch
+tar xzvf mit-scheme-9.2.tar.gz
+cd mit-scheme-9.2
+patch -p0 < mit-scheme-9.2.patch
 cd mit-scheme-9.2/src
 make
 sudo make install
