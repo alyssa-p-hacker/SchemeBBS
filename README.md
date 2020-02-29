@@ -37,7 +37,8 @@ curl -O http://ftp.gnu.org/gnu/mit-scheme/stable.pkg/9.2/mit-scheme-9.2.tar.gz
 tar xzvf mit-scheme-9.2.tar.gz
 cd mit-scheme-9.2
 patch -p0 < mit-scheme-9.2.patch
-cd src
+cd mit-scheme-9.2/src
+./configure
 make
 sudo make install
 ```
