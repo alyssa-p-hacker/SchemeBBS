@@ -82,16 +82,16 @@ dt {
 }
 /* post number */
 dt a {
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 /* post date */
 dt code {
-  font-size: 0.9em;
+  font-size: 1em;
   font-family: "Courier New", monospace;
   color: #555555;
 }
 dt samp {
-  font-size: .9em;
+  font-size: 1em;
   font-family: "Courier New", monospace;
   margin-left: 1%;
 }
