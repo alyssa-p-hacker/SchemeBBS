@@ -140,12 +140,12 @@
 	  (li (a (@ (class "static") (href "/static/userscripts/highlight.user.js")) "Syntax Highlighting"))
 	  (li (a (@ (class "static") (href "/static/userscripts/wordfilter.user.js")) "Word Filter"))
 	  (li (a (@ (class "static") (href "/static/userscripts/unvip.user.js")) "unVIP: (order the thread list by last updates)"))
-	  (li (a (@ (class "static") (href "/static/userscripts/localjump.user.js")) "localjump (Jump to linked posts by anchors, Futaba-style)"))
+	  (li (a (@ (class "static") (href "/static/userscripts/localjump.user.js")) "localjump (jump to linked posts by anchors, Futaba-style)"))
 	  ))
     (dt (b "Clients"))
     (dd
     (p 
-      "Philip K wrote a slick mode for posting from Emacs, let's all " (code "M-x sbbs") ": "
+      "zge wrote a slick mode for posting from Emacs, let's all " (code "M-x sbbs") ": "
        (a (@ (href "https://git.sr.ht/~zge/sbbs")) "sbbs.el"))))
     (hr)
     ,footer
