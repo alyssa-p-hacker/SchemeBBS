@@ -1,3 +1,7 @@
-data/*
+data/html/prog/*
+data/html/sol/*
+data/sexp/prog/*
+data/sexp/sol/*
+static/index.html
 static/img/abelson-stole-the-precious-course-mit-version.webm
 hash
