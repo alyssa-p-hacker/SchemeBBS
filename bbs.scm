@@ -1,6 +1,5 @@
 (load-option 'format)
 (load "lib/utils.scm")
-(load "deps/httpio.scm")
 (load "deps/server.scm")
 (load "deps/irregex")
 (load "deps/srfi-26.scm")
