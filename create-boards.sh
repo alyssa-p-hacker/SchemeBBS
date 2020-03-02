@@ -7,6 +7,7 @@ for board in $@; do
   else
       mkdir -p "$DATADIR/sexp/$board"
       mkdir -p "$DATADIR/html/$board"
+      touch "$DATADIR/sexp/$board/index"
       echo '<!DOCTYPE HTML PUBLIC "ISO/IEC 15445:2000//DTD HyperText Markup Language//EN">
 <HTML>
 <HEAD>
