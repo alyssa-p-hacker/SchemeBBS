@@ -8,7 +8,7 @@
            (meta (@ (content "text/html; charset=UTF-8") (http-equiv "Content-Type")))
            (meta (@ (name "viewport") (content "width=device-width, initial-scale=1.0")))
            (link (@ (rel "icon") (href "/static/favicon.ico") (type "image/png")))
-           (link (@ (href "/static/styles/default.css") (rel "stylesheet") (type "text/css"))))
+           (link (@ (href "/static/styles/2ch.css") (rel "stylesheet") (type "text/css"))))
      ,(if (default-object? class)
      `(body ,page)
      `(body (@ (class "thread")) ,page))
@@ -38,7 +38,9 @@
 (define (make-post-form board thread frontpage #!optional content flash)
   (let ((form
           `((form (@ (action ,(make-abs-path board thread "post")) (method "post"))
-                  (p (textarea (@ (name "epistula") (rows "8") (cols "78"))
+                  (p 
+                     (input (@ (type "text") (cols 40)))
+                     (textarea (@ (name "epistula") (rows "8") (cols "78"))
                                ,(if (default-object? content)
                                     ""
                                     content))
