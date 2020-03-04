@@ -18,7 +18,7 @@ You can also access it anonymously via i2p
 ./init.sh 8080
 ```
 
-Note: SchemeBBS should not directly serves client, its HTTP implementation is 
+Note: SchemeBBS should not directly serve clients, its HTTP implementation is 
 far too incomplete. It needs Nginx as a reverse proxy for caching and serving
 static files.
 
