@@ -196,14 +196,11 @@
     (lambda (sub) `(a (@ (href ,sub)) ,sub))))
 
 
+(define line-scanner-order (list
+  del code link quotelink bold italic))
+
 (define (line-scanner l)
-  (let ((b (partial lines->sxml bold))
-        (i (partial lines->sxml italic))
-        (tt (partial lines->sxml code))
-        (ql (partial lines->sxml quotelink))
-        (a (partial lines->sxml link))
-        (spoiler (partial lines->sxml del)))
-    ((compose spoiler tt a ql b i) l)))
+  ((apply compose (map (lambda (tr) (partial lines->sxml tr)) line-scanner-order)) l))
 
 (set! markup->sxml
   (lambda (text board thread)
