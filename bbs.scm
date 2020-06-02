@@ -1,24 +1,24 @@
 (load-option 'format)
-(load "lib/utils.scm")
-(load "deps/server.scm")
+(load "lib/utils")
 (load "deps/irregex")
-(load "deps/srfi-26.scm")
-(load "lib/html.scm")
-(load "lib/parameters.scm")
-(load "lib/markup.scm")
-(load "templates.scm")
+(load "deps/srfi-26")
+(load "deps/httpio")
+(load "deps/server")
+(load "lib/html")
+(load "lib/parameters")
+(load "lib/markup")
+(load "templates")
 
 (define *sexp* "data/sexp")
 (define *html* "data/html")
 (define *frontpage-threads* 10)
 (define *max-headline-size* 78)
-(define *max-post-size* 4096)
+(define *max-post-size* 8192)
 (define *max-posts* 300)
 
 (define (get-form-hash)
- "this stub is here to stay"
- "can't user blowfish or mcrypt, so..."
- (call-with-input-file "hash" read))
+  "TODO"
+  (call-with-input-file "hash" read))
 
 ;;; helpers
 
@@ -71,9 +71,9 @@
         (ip (http-header 'x-forwarded-for headers #f))
         )
     ;(pp ip)
-    ;(pp req)
+    (pp req)
     ;(pp headers)
-    ;(pp (http-header 'x-forwarded-for headers #f))
+    (pp (http-header 'x-forwarded-for headers #f))
     ;(pp (http-header 'host headers #f))
     (cond ((equal? method "GET")
           (match path
@@ -388,9 +388,9 @@
           ((string-null? message)
            '(empty-message . "Empty post"))
           ((and (not (default-object? headline)) (> (string-length headline) *max-headline-size*))
-           '(headline-too-long . "Headline too long (max: 78 chars)"))
+           `(headline-too-long . (string-append "Headline too long (max: " ,(number->string *max-headline-size*) " bytes)")))
           ((> (string-length message) *max-post-size*)
-           '(message-too-long . "Your post is too long (max: 4096 bytes)"))
+           `(message-too-long . (string-append "Your post is too long (max: " ,(number->string *max-post-size*) " bytes)")))
           ((not (and (string-null? fake-message)
                      (string-null? fake-name)))
            'spam)

@@ -1,0 +1,337 @@
+@font-face {
+  font-family: "Monapo";
+  src: url("/static/styles/fonts/monapo.eot"); /* IE9 Compat Modes */
+  src: url("/static/styles/fonts/monapo.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("/static/styles/fonts/monapo.otf") format("opentype"), /* Open Type Font */
+    url("/static/styles/fonts/monapo.svg") format("svg"), /* Legacy iOS */
+    url("/static/styles/fonts/monapo.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("/static/styles/fonts/monapo.woff") format("woff"), /* Modern Browsers */
+    url("/static/styles/fonts/monapo.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #200200;
+  font-family: Monapo;
+  font-size: 100%;
+  background-image: url('data:image/png;base64,\
+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');
+  background-repeat: repeat;
+}
+p.boardlist {
+  font-size: 0.8em;
+  margin: 1em auto 0 auto;
+  text-align: center;
+  color: #666;
+}
+h1 {
+  margin: 0.5em 2% 0 2%;
+  padding: 1.5em 0 0 0;
+  font-size: 2em;
+  font-weight: bold;
+  background-color: #ccffcc;
+  border-left: 1px solid #bababa;
+  border-top: 1px solid #bababa;
+  border-right: 1px solid #bababa;
+  text-align: center;
+}
+h2 {
+  margin: 0 2% 0 2%;
+  padding: 0.8em 1% 0.4em 1%;
+  font-size: 1.5em;
+  font-weight: bold;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  border-left: 1px solid #bababa;
+  border-top: 1px solid #bababa;
+  border-right: 1px solid #bababa;
+  background-color: #fafafa;
+}
+h2#newthread {
+  background-color: #ccffcc;
+  margin-top: 0;
+}
+h2 a, h2 a:visited, h2 a:active {
+    color: red;
+}
+
+hr {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  height: 1px;
+  background-color: #aaaaaa;
+  color: #aaaaaa;
+  visibility: hidden;
+}
+p.nav {
+  margin: 0 2% 1em 2%;
+  padding: 0.5em 0 1em 0;
+  text-align: center;
+  background-color: #ccffcc;
+  border-left: 1px solid #bababa;
+  border-bottom: 1px solid #bababa;
+  border-right: 1px solid #bababa;
+}
+pre.jump {
+  margin: 0 3% -1.5em 0;
+  padding: 0;
+  font-size: 1em;
+  font-weight: bold;
+  word-spacing: 1em;
+  text-align: right;
+  background-color: transparent;
+}
+
+a, a:visited, a:active {
+  color: blue;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:target {
+  background-color: #f3f3f3;
+  text-decoration: underline;
+}
+del {
+  text-decoration: none;
+  background-color: black;
+}
+del:hover {
+  background-color: transparent;
+}
+p.newthread {
+  margin: 0 2% 1em 2%;
+  padding: 0 2% 1em 2%;
+  background-color: #ccffcc;
+  border-left: 1px solid #bababa;
+  border-bottom: 1px solid #bababa;
+  border-right: 1px solid #bababa;
+}
+pre {
+  margin: 0 2% 0 2%;
+  padding: 0 2% 1em 2%;
+  font-size: 1em;
+  background-color: #ccffcc;
+}
+dl {
+  margin: 0 2% 1em 2%;
+  padding: 0 1%;
+  border-left: 1px solid #bababa;
+  border-bottom: 1px solid #bababa;
+  border-right: 1px solid #bababa;
+  background-color: #fafafa;
+}
+dt {
+  margin: 0;
+  padding: 0;
+}
+/* post number */
+dt a, dt a:visited {
+  font-size: 1.2em;
+  color: black;
+}
+/* post date */
+dt samp {
+  font-size: 0.83em;
+  font-family: "Courier New", monospace;
+  color: #555555;
+}
+dt samp:before {
+  content: "名無しさん";
+  color: green;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+}
+dd {
+  margin: 0 2%;
+  padding: 0;
+  /*line-height: 1.2em;*/
+}
+dd p {
+  margin: 0.5em 0 1em 0;
+  padding: 0;
+  border: none;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  background-color: #fafafa;
+}
+
+dd pre, dd code {
+  font-size: 1em;
+  font-family: "Courier New", monospace;
+}
+dd pre {
+  background-color: #fafafa;
+  margin: 1.2em 0;
+  padding: 2px;
+  line-height: 1.45em;
+  overflow: auto;
+}
+samp {
+  font-size: .83em;
+  font-family: "Courier New", monospace;
+}
+
+blockquote {
+  border-left: solid 2px #999999;
+  margin: 1em 0 1em 0;
+  padding: 0 0 0 0.5em;
+  background-color: inherit;
+  color: #555555;
+}
+blockquote:hover {
+  background-color: #f9f9f0;
+}
+blockquote p {
+  background: transparent;
+}
+table {
+  background-color: #fafafa;
+  border: 1px solid #bababa;
+  margin: 0 2% 1em 2%;
+  padding: 1em;
+  width: 96%;
+}
+th {
+  color: #666666;
+  font-weight: normal;
+  text-align: left;
+}
+td {
+  border: 0;
+  padding: 0.2em 5px;
+  background-color: #fafafa;
+  line-height: 1em;
+}
+
+td p, td pre, td blockquote {
+  margin: .5em 0;
+}
+
+/* forms */
+
+textarea {
+  font-family: "Monapo";
+  border: 1px solid #bababa;
+  padding: 2px;
+  max-width: 100%;
+  font-size: 0.8em;
+}
+input[type=text] {
+  font-family: "Monapo";
+  font-size: 0.8em;
+  border: 1px solid #bababa;
+  padding: 2px;
+  max-width: 100%;
+}
+input[type=submit] {
+  font-size: 0.8em;
+  border: 1px solid #bababa;
+  padding: 2px;
+  margin: 0;
+  background-color: #dadada;
+  color: black;
+}
+input[type=submit]:hover {
+  background-color: yellow;
+}
+input[type=submit]:active {
+  padding: 2px 1px 2px 3px;
+}
+
+input[type=checkbox] {
+  border: 1px solid #bababa;
+  vertical-align: middle;
+  margin: 0 2px;
+}
+pre {
+    background-color: transparent;
+}
+
+p.footer {
+  font-size: small;
+  background: transparent;
+  text-align: center;
+  border: none; 
+  padding: 0;
+  margin: 0 0 1em 0;
+}
+
+fieldset.comment {
+  display: none;
+}
+textarea.message {
+    display: none;
+}
+input.name {
+    display: none;
+}
+
+p.threadlist {
+    background-color: #bababa;
+}
+
+fieldset {
+  border: none;
+  margin: 1em 0;
+  padding: 0;
+}
+ul {
+  padding: 0 0 1em 1em;
+  margin: 0;
+}
+
+body.thread {
+  background-image: none;
+  background-color: #fafafa;
+}
+body.thread h1 {
+  display: none;
+}
+body.thread p.nav {
+  background-color: #fafafa;
+  border: none;
+  text-align: left;
+  margin: 1em 0 0.5em 3%;
+}
+
+body.thread h2, body.thread dl {
+  border: none;
+}
+
+body.thread hr {
+ visibility: visible;
+}

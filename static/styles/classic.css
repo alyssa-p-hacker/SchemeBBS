@@ -36,6 +36,12 @@ QAAAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAAAAQAAA\
 AAAAAAAAQAAAAAAAAAAAQAAAAAAAAAAAQGU6B88eNlthAAAAAElFTkSuQmCC');
   background-repeat: repeat;
 }
+p.boardlist {
+  font-size: 0.8em;
+  margin: 1em auto 0 auto;
+  text-align: center;
+  color: #666;
+}
 h1 {
   margin: 1em 2% 0 2%;
   padding: 1.5em 0 0 0;

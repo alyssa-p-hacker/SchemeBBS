@@ -37,7 +37,7 @@ Initializes our web server.
   (define (listen tcp-port)
     (let ((socket (open-tcp-server-socket
                     tcp-port
-                    (host-address-loopback))))
+                    (host-address-any))))
       (printf "Listening to port: ~A" tcp-port)
       (dynamic-wind
         (lambda () unspecific)
@@ -203,7 +203,7 @@ Initializes our web server.
 
 (define HTTP/1.1 (cons 1 1))
 
-(define INTERNAL-DEBUG-ERRORS #f)
+(define INTERNAL-DEBUG-ERRORS #t)
 (define ENABLE-LOGGING #t)
 
 ;;; Public API

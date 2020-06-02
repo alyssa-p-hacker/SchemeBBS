@@ -1,14 +1,14 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: white;
-  color: #000000;
+  background-color: #1c2023;
+  color: #95aec7;
   font-family: serif;
   font-size: 100%;
 }
 /* Board Name */
 h1 {
-  margin: 0.5em 2% 0.3em 2%;
+  margin: 0.2em 2% 0.3em 2%;
   padding: 0;
   font-size: 2em;
   font-weight: bold;
@@ -31,27 +31,32 @@ hr {
   margin: 0;
   padding: 0;
   height: 1px;
-  background-color: #aaaaaa;
-  color: #aaaaaa;
+  background-color: #716356;
+  color: #716356;
 }
 p.newthread {
   margin: 1em 2% 2em 2%;
   padding: 1em 2%;
-  background-color: #efefef;
+  background-color: #202427;
 }
+/* boardlist */
+p.boardlist {
+  margin: 0.8em 2% 0 2%;
+  font-size: 0.8em;
+  color: #999;
+}
+
 /* menu */
 p.nav {
   margin: 0.5em 2% 0.5em 2%;
   padding: 0;
   font-size: .9em;
   font-style: italic;
-  background-color: white;
 }
 /* thread navigation */
 pre.jump {
   margin: 0 2% -1em 0;
   padding: 0;
-  background-color: white;
   font-size: 1em;
   font-family: serif;
   font-weight: bold;
@@ -62,14 +67,14 @@ pre.jump a {
 text-decoration: none;
 }
 a, a:visited, a:active {
-  color: #882200;
+  color: #c7ae95;
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
 }
 a:target {
-  background-color: #f3f3f3;
+  background-color: #22272a;
   text-decoration: underline;
 }
 dl {
@@ -88,11 +93,12 @@ dt a {
 dt code {
   font-size: 1em;
   font-family: monospace;
-  color: #555555;
+  color: #8bafd2;
 }
 dt samp {
   font-size: 1em;
   font-family: monospace;
+  color: #8bafd2;
   margin-left: 1%;
 }
 
@@ -116,24 +122,25 @@ dd pre, dd code {
 dd pre {
   margin: 1.2em 0;
   padding: 2px;
-  background-color: #f7f7f7;
+  color: #95aec7;
+  background-color: #1f2427;
   line-height: 1.4em;
   overflow: auto;
 }
 blockquote {
-  border-left: solid 2px #cccccc;
+  border-left: solid 2px #859774;
   margin: 1em 0 1em 0;
   padding: 0 0 0 1em;
   background-color: inherit;
-  color: #555555;
+  color: #9aae86;
 }
 blockquote:hover {
-  background-color: #fafafa;
+  background-color: #252b2f;
 }
 
 /* spoilers */
 del {
-  background-color: #200200;
+  background-color: #95aec7;
   text-decoration: none;
 }
 del:hover {
@@ -147,6 +154,7 @@ table {
 }
 th {
   color: #666666;
+  background-color: #1c2023;
   padding: 0.1em 0.5em;
   font-family: monospace;
   font-weight: normal;
@@ -156,15 +164,14 @@ th {
 td {
   border: 0;
   padding: 0.1em 0.5em;
-// background-color: #fafafa;
   line-height: 1em;
 }
 
 tr:nth-child(odd) {
-  background: #fafafa;
+  background: #252a2e;
 }
 tr:hover {
-  background-color: yellow;
+  background-color: #536883;
 }
 td p, td pre, td blockquote {
   margin: .5em 0;
@@ -174,17 +181,19 @@ td p, td pre, td blockquote {
 
 textarea {
   margin: 0.2em 0 0.2em 0;
-  border: 1px solid #bababa;
+  border: 1px solid #334a68;
   padding: 2px;
   max-width: 98%;
-  //overflow: hidden;
-  
+  color: #95aec7;
+  background-color: #293035; 
   font-size: 1em;
   font-family: monospace;
 }
 input[type=text] {
   margin: 0.2em 0 0.5em 0;
-  border: 1px solid #bababa;
+  border: 1px solid #334a68;
+  background-color: #293035; 
+  color: #95aec7;
   padding: 2px;
   max-width: 98%;
   font-size: 1em;
@@ -195,20 +204,21 @@ input[type=submit] {
   font-family: sans-serif;
   font-size: 0.8em;
   margin: 0.4em 0;
-  border: 1px solid #bababa;
+  border: 1px solid #334a68;
   padding: 2px;
-  background-color: #dadada;
-  color: black;
+  background-color: #293035; 
+  color: #95aec7;
 }
 input[type=submit]:hover {
-  background-color: yellow;
+  background-color: #536883;
 }
 input[type=submit]:active {
   padding: 2px 1px 2px 3px;
 }
 
 input[type=checkbox] {
-  border: 1px solid #bababa;
+  border: 1px solid #334a68;
+  background-color: #293035 !important; 
   vertical-align: middle;
   margin: 0 2px;
 }
