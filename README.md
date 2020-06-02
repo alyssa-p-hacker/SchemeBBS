@@ -81,6 +81,10 @@ For an improved browsing experience, Anon wrote a praiseworthy Emacs client:
 of the [Sexp-API](https://textboard.org/sexp/prog/). `sbbs.el` is the
 recommended gear to ride SchemeBBS' boards, try it.
 
+<img src="https://user-images.githubusercontent.com/44328637/83544872-db881b00-a4fe-11ea-809b-60c76ef82eaa.png" alt="sbbs1" width="300"/> <img src="https://user-images.githubusercontent.com/44328637/83544483-3ec57d80-a4fe-11ea-9924-6ea2ebf293dc.png" alt="sbbs1" width="300"/>
+
+
+
 ## Userscripts
 
 There's no Javascript at all in SchemeBBS but you can inject your own if you
