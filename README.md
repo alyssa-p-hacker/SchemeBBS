@@ -1,23 +1,29 @@
 # SchemeBBS
 
-Anonymous BBS written in MIT Scheme
+Anonymous BBS written in MIT Scheme.
 
-## Demo
+## Demo Boards
 
-[https://textboard.org/prog](http://textboard.org/prog)
+* [https://textboard.org/prog](https://textboard.org/prog)
+* [https://bbs.jp.net/mona](https://textboard.org/prog)
 
-[https://textboard.org](http://textboard.org)
+A bit of context: [https://textboard.org](https://textboard.org)
 
 
 ## Run it
 
 ```
+./create-boards.sh romance smoothies origami
 ./init.sh 8080
 ```
 
-SchemeBBS should not directly serve clients, even if it's possible to do so. The HTTP implementation is far too incomplete and you should use your favorite web server as a reverse proxy.
+SchemeBBS should not directly serve clients, even if it's possible to do so.
+The HTTP implementation is far too incomplete and you should use your 
+favorite web server as a reverse proxy.
 
 ## Patching MIT Scheme
+
+**SchemeBBS web server won't run properly if you don't patch MIT Scheme 9.2!**
 
 The file runtime/http-syntax.scm follows the RFC 2616 which requires
 that the value of the Location header be an absolute URI.
@@ -37,6 +43,50 @@ cd mit-scheme-9.2/src
 make
 sudo make install
 ```
+
+You can also download pre-patched binaries for x86_64:
+```
+curl -O https://textboard.org/static/mit-scheme-9.2/mit-scheme-9.2b-x86-64.tar.gz
+cd mit-scheme-9.2/src
+./configure && make
+sudo make install
+```
+
+## Docker Images
+
+[TeamWau](https://github.com/TeamWau/) published two 
+[Docker Images](https://github.com/TeamWau/docker-schemebbs) 
+that do everything for you. Thanks to them.
+
+### Standalone SchemeBBS webapp
+```
+git clone https://github.com/TeamWau/docker-schemebbs.git
+cd schemebbs && ./create-boards.sh prog art knitting
+export SBBS_DATADIR=/opt/bbs
+docker run -p 80:8080 --name sbbs -v "${SBBS_DATADIR}":/opt/schemebbs/data -d erkin/schemebbs
+```
+### SchemeBBS with pre-configured Nginx
+```
+git clone https://github.com/TeamWau/docker-schemebbs-nginx.git
+cd schemebbs &&./create-boards.sh cats travel food
+export SBBS_DATADIR=/opt/bbs
+docker run -p 80:80 --name sbbs -d  -v "${SBBS_DATADIR}":/opt/schemebbs/data \
+    -v "$(pwd)"/nginx.conf:/opt/nginx/conf/nginx.conf erkin/schemebbs-nginx
+```
+
+## Emacs Client
+
+For an improved browsing experience, Anon wrote a praiseworthy Emacs client:
+[sbbs.el](https://fossil.textboard.org/sbbs/index) which is taking advantage
+of the [S-exp API](https://textboard.org/sexp/prog/). `sbbs.el` is the
+recommended gear to ride SchemeBBS' boards, try it.
+
+## Userscripts
+
+There's no Javascript at all in SchemeBBS but you can inject your own if you
+need to change the behaviour of the BBS. The HTML is minimalistic, so it's
+pretty straightforward. There's a small collection of
+[such userscripts here](https://fossil.textboard.org/userscripts/dir?ci=tip).
 
 ## License
 ```
