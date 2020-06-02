@@ -5,7 +5,7 @@ Anonymous BBS written in MIT Scheme.
 ## Demo Boards
 
 * [https://textboard.org/prog](https://textboard.org/prog)
-* [https://bbs.jp.net/mona](https://textboard.org/prog)
+* [https://bbs.jp.net/mona](https://bbs.jp.net/mona)
 
 A bit of context: [https://textboard.org](https://textboard.org)
 
@@ -78,7 +78,7 @@ docker run -p 80:80 --name sbbs -d  -v "${SBBS_DATADIR}":/opt/schemebbs/data \
 
 For an improved browsing experience, Anon wrote a praiseworthy Emacs client:
 [sbbs.el](https://fossil.textboard.org/sbbs/index) which is taking advantage
-of the [S-exp API](https://textboard.org/sexp/prog/). `sbbs.el` is the
+of the [Sexp-API](https://textboard.org/sexp/prog/). `sbbs.el` is the
 recommended gear to ride SchemeBBS' boards, try it.
 
 ## Userscripts
