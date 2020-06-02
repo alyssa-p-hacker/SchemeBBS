@@ -1,12 +1,19 @@
 @font-face {
   font-family: "Monapo";
-  src: url("/static/styles/fonts/monapo.eot"); /* IE9 Compat Modes */
-  src: url("/static/styles/fonts/monapo.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("/static/styles/fonts/monapo.otf") format("opentype"), /* Open Type Font */
-    url("/static/styles/fonts/monapo.svg") format("svg"), /* Legacy iOS */
-    url("/static/styles/fonts/monapo.ttf") format("truetype"), /* Safari, Android, iOS */
-    url("/static/styles/fonts/monapo.woff") format("woff"), /* Modern Browsers */
-    url("/static/styles/fonts/monapo.woff2") format("woff2"); /* Modern Browsers */
+  src: local("Monapo"),
+       local("Monapo-Regular"),
+       url("/static/styles/fonts/monapo.eot"); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: "Monapo";
+  src: local("Monapo"),
+       local("Monapo-Regular"),
+       url("/static/styles/fonts/monapo.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+       url("/static/styles/fonts/monapo.otf") format("opentype"), /* Open Type Font */
+       url("/static/styles/fonts/monapo.svg") format("svg"), /* Legacy iOS */
+       url("/static/styles/fonts/monapo.ttf") format("truetype"), /* Safari, Android, iOS */
+       url("/static/styles/fonts/monapo.woff") format("woff"), /* Modern Browsers */
+       url("/static/styles/fonts/monapo.woff2") format("woff2"); /* Modern Browsers */
   font-weight: normal;
   font-style: normal;
 }
