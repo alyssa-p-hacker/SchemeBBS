@@ -63,15 +63,15 @@ that do everything for you. Thanks to them.
 ### Standalone SchemeBBS webapp
 ```
 git clone https://github.com/TeamWau/docker-schemebbs.git
-cd schemebbs && ./create-boards.sh prog art knitting
 export SBBS_DATADIR=/opt/bbs
+cd schemebbs && ./create-boards.sh prog art knitting
 docker run -p 80:8080 --name sbbs -v "${SBBS_DATADIR}":/opt/schemebbs/data -d erkin/schemebbs
 ```
 ### SchemeBBS with pre-configured Nginx
 ```
 git clone https://github.com/TeamWau/docker-schemebbs-nginx.git
-cd schemebbs &&./create-boards.sh cats travel food
 export SBBS_DATADIR=/opt/bbs
+cd schemebbs &&./create-boards.sh cats travel food
 docker run -p 80:80 --name sbbs -d  -v "${SBBS_DATADIR}":/opt/schemebbs/data \
     -v "$(pwd)"/nginx.conf:/opt/nginx/conf/nginx.conf erkin/schemebbs-nginx
 ```
