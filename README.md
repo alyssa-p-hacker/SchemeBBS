@@ -2,7 +2,7 @@
 
 Anonymous BBS written in MIT Scheme.
 
-<img src="https://user-images.githubusercontent.com/44328637/83545231-36217700-a4ff-11ea-80c2-3aa5e79dac14.png" alt="prog" width="300"/> <img src="https://user-images.githubusercontent.com/44328637/83626395-a084f680-a595-11ea-8cab-7c4f22bcbd23.png" alt="mona" width="300"/> <img src="https://user-images.githubusercontent.com/44328637/83545264-433e6600-a4ff-11ea-9ab8-e5fc3c69b436.png" alt="sol" width="300"/>
+<img src="https://user-images.githubusercontent.com/44328637/83545231-36217700-a4ff-11ea-80c2-3aa5e79dac14.png" alt="prog" width="250"/> <img src="https://user-images.githubusercontent.com/44328637/83626395-a084f680-a595-11ea-8cab-7c4f22bcbd23.png" alt="mona" width="250"/> <img src="https://user-images.githubusercontent.com/44328637/83545264-433e6600-a4ff-11ea-9ab8-e5fc3c69b436.png" alt="sol" width="250"/>
 
 ## Demo Boards
 
